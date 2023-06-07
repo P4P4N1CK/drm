@@ -1,0 +1,46 @@
+<html>
+<head>
+  </head>
+<body>
+  <div class='video'>
+  <script src="https://use.fontawesome.com/20603b964f.js"></script>
+  <body  style="padding: 0px; margin:0px;">
+<script src="https://ssl.p.jwpcdn.com/player/v/8.26.4/jwplayer.js"></script>
+<script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+</script>
+<div id="player"></div>
+<script> 
+    var playerInstance = jwplayer("player"); 
+    playerInstance.setup({ 
+        playlist: [{
+            "title": "REPRODUCTOR",
+          "description": "EN VIVO",
+            "sources": [
+                {
+                    "default": false,
+                    "type": "dash",
+                    "file": 'https://live5-ott.izzigo.tv/out/u/dash/HBO-POP-HD/default.mpd',
+                    "drm": {
+                        "clearkey": { "keyId": "bcf36f412fa3d735cea04f7443fbf77c", "key": "6ff29fb2d6b7d825eb06004650a0a4ea" }
+                    },
+                    "label": "0"
+                }
+            ]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        allowfullscreen: true,
+		autostart: true,
+		skin: {
+		name: "black",
+		active: "RED", 
+		inactive: "GOLD",
+		background: "black"
+    }
+       }
+       );
+  jwplayer("player").on("play", function(e){jwplayer("player").setCurrentAudioTrack(1)});
+</script>
+</body>
+</html>
